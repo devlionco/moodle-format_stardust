@@ -382,7 +382,7 @@ class format_stardust extends format_base {
                 'help_component' => 'moodle',
             ),
             'showbagestag' => array(
-                'label' => get_string('showbagestag', 'format_cards'),
+                'label' => get_string('showbagestag', 'format_stardust'),
                 'element_type' => 'select',
                 'element_attributes' => array(
                     array(
@@ -390,11 +390,11 @@ class format_stardust extends format_base {
                         0 => new lang_string('no'),
                     )
                 ),
-                'help' => get_string('showbagestagdesc', 'format_cards'),
+                'help' => get_string('showbagestagdesc', 'format_stardust'),
                 'help_component' => 'moodle',
             ),
             'showcertificatestag' => array(
-                'label' => get_string('showcertificatestag', 'format_cards'),
+                'label' => get_string('showcertificatestag', 'format_stardust'),
                 'element_type' => 'select',
                 'element_attributes' => array(
                     array(
@@ -402,7 +402,7 @@ class format_stardust extends format_base {
                         0 => new lang_string('no'),
                     )
                 ),
-                'help' => get_string('showcertificatestagdesc', 'format_cards'),
+                'help' => get_string('showcertificatestagdesc', 'format_stardust'),
                 'help_component' => 'moodle',
             )
         );
