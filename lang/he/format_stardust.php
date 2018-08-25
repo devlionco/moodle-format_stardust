@@ -23,7 +23,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'יחידות גמישות';
+$string['pluginname'] = 'יחידות ותתי יחידות';
 $string['addsection'] = 'Add section';
 $string['addsubsection'] = 'Add subsection';
 $string['backtocourse'] = 'Back to course \'{$a}\'';
