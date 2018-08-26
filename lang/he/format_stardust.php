@@ -55,7 +55,15 @@ $string['openall'] = 'פתח הכל';
 $string['closeall'] = 'סגור הכל';
 
 
-$string['showbagestag'] = 'Display Badges block';
-$string['showbagestagdesc'] = 'Show or hide block';
-$string['showcertificatestag'] = 'Display Certificates block';
-$string['showcertificatestagdesc'] = 'Show or hide block';
+// header blocks settings
+$string['displayunits'] = 'משבצת יחידות';
+$string['displayunitsdesc'] = 'משבצת יחידות';
+$string['displaymessages'] = 'משבצת הודעות';
+$string['displaymessagesdesc'] = 'משבצת הודעות';
+$string['displaygrades'] = 'משבצת צלמיות';
+$string['displaygradesdesc'] = 'משבצת צלמיות';
+
+$string['showbagestag'] = 'צלמית מדליות';
+$string['showbagestagdesc'] = 'צלמית מדליות';
+$string['showcertificatestag'] = 'צלמית תעודות';
+$string['showcertificatestagdesc'] = 'צלמית תעודות';
