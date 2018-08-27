@@ -354,7 +354,7 @@ class format_stardust extends format_base {
                         0 => new lang_string('no'),
                     )
                 ),
-                'help' => get_string('displayunitsdesc', 'format_stardust'),
+                'help' => "displayunitsdesc",
                 'help_component' => 'moodle',
             ),
             'displaymessages' => array(
@@ -366,7 +366,7 @@ class format_stardust extends format_base {
                         0 => new lang_string('no'),
                     )
                 ),
-                'help' => get_string('displaymessagesdesc', 'format_stardust'),
+                'help' =>"displaymessagesdesc",
                 'help_component' => 'moodle',
             ),
             'displaygrades' => array(
@@ -378,11 +378,11 @@ class format_stardust extends format_base {
                         0 => new lang_string('no'),
                     )
                 ),
-                'help' => get_string('displaygradesdesc', 'format_stardust'),
+                'help' => "displaygradesdesc",
                 'help_component' => 'moodle',
             ),
             'showbagestag' => array(
-                'label' => get_string('showbagestag', 'format_cards'),
+                'label' => get_string('showbagestag', 'format_stardust'),
                 'element_type' => 'select',
                 'element_attributes' => array(
                     array(
@@ -390,11 +390,11 @@ class format_stardust extends format_base {
                         0 => new lang_string('no'),
                     )
                 ),
-                'help' => get_string('showbagestagdesc', 'format_cards'),
+                'help' => "showbagestagdesc",
                 'help_component' => 'moodle',
             ),
             'showcertificatestag' => array(
-                'label' => get_string('showcertificatestag', 'format_cards'),
+                'label' => get_string('showcertificatestag', 'format_stardust'),
                 'element_type' => 'select',
                 'element_attributes' => array(
                     array(
@@ -402,7 +402,7 @@ class format_stardust extends format_base {
                         0 => new lang_string('no'),
                     )
                 ),
-                'help' => get_string('showcertificatestagdesc', 'format_cards'),
+                'help' => "showcertificatestagdesc",
                 'help_component' => 'moodle',
             )
         );
