@@ -1446,9 +1446,10 @@ function format_stardust_check_params() {
     if (optional_param('sectionid', 0, PARAM_INT)){
         return true;
     }
-    if (optional_param('notifyeditingon', 0, PARAM_INT)){
-        return true;
-    }
+    // @GS - remove this if to display pinned sections in edit mode
+    // if (optional_param('notifyeditingon', 0, PARAM_INT)){
+    //     return true;
+    // }
 
     return false;
 }

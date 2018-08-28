@@ -260,7 +260,7 @@ class format_stardust_renderer extends plugin_renderer_base {
         echo html_writer::start_tag('div', array('class' => 'content'));
         // display section name and expanded/collapsed control
 
-        if ($sectionnum != 0 ) {
+         if ($sectionnum != 0 ) {
 
 
             if ($section->collapsed == FORMAT_STARDUST_COLLAPSED) {
@@ -290,7 +290,7 @@ class format_stardust_renderer extends plugin_renderer_base {
         // add progress bar to section header
         echo $this->getsectionprogress($section);
 
-        }
+        } 
         // display section description (if needed)
         if ($contentvisible && ($summary = $this->format_summary_text($section))) {
             echo html_writer::tag('div', $summary, array('class' => 'summary'));
@@ -301,7 +301,7 @@ class format_stardust_renderer extends plugin_renderer_base {
         // display section contents (activities and subsections)
         if ($contentvisible) {
             // display resources and activities
-            if ($sectionnum != 0) { echo $this->courserenderer->course_section_cm_list($course, $section, $sr);}
+            if ($sectionnum != 0 || $pinned) {  echo $this->courserenderer->course_section_cm_list($course, $section, $sr);}  // SG - content is displayed in all sections, except second (unpinned mode) 0 sec
             if ($PAGE->user_is_editing()) {
                 // a little hack to allow use drag&drop for moving activities if the section is empty
                 if (empty(get_fast_modinfo($course)->sections[$sectionnum])) {
@@ -319,12 +319,13 @@ class format_stardust_renderer extends plugin_renderer_base {
 
             if (!empty($children) || $movingsection) {
               //TODO hide/show subsection
-                $sectionstyle = '';
-                if (course_get_format($course)->get_section($num)->collapsed == FORMAT_STARDUST_COLLAPSED && $level > 0 && !$PAGE->user_is_editing() ) {
-                  $sectionstyle = 'display:none';
-                }elseif (course_get_format($course)->get_section($num)->collapsed == FORMAT_STARDUST_COLLAPSED && $level > 1 && $PAGE->user_is_editing()) {
-                  $sectionstyle = 'display:none';
-                }
+              // SG - hide temporary
+                // $sectionstyle = '';
+                // if (course_get_format($course)->get_section($num)->collapsed == FORMAT_STARDUST_COLLAPSED && $level > 0 && !$PAGE->user_is_editing() ) {
+                //   $sectionstyle = 'display:none';
+                // }elseif (course_get_format($course)->get_section($num)->collapsed == FORMAT_STARDUST_COLLAPSED && $level > 1 && $PAGE->user_is_editing()) {
+                //   $sectionstyle = 'display:none';
+                // }
 
                 echo html_writer::start_tag('ul', array('class' => 'flexsections flexsections-level-'.($level+1), 'style' => $sectionstyle ));
                 foreach ($children as $num) {
