@@ -792,7 +792,8 @@ class format_stardust extends format_base {
         $subsections = array();
         $sectionnumber = $this->get_section_number($section);
         if (!$sectionnumber && !$visibility) {
-            // can not hide section with number 0
+            set_section_visible($this->courseid, $sectionnumber, 3); // SG - hack to hide section 0 content with css styling
+            // can not hide section with number 0 in reality
             return;
         }
         $section = $this->get_section($section);
@@ -927,8 +928,8 @@ class format_stardust extends format_base {
             $controls[] = new format_stardust_edit_control('move', $moveurl, $text);
         }
 
-        if ($sectionnum && has_capability('moodle/course:sectionvisibility', $context)) {
-            if ($section->visible) {
+        if ($sectionnum == 0 && has_capability('moodle/course:sectionvisibility', $context)) {
+            if ($section->visible == 1) { // SG - hack for stardust to hide/show section 0 content with css styling
                 $hideurl = course_get_url($course, $sr);
                 $hideurl->params(array('hide' => $section->section, 'sesskey' => sesskey()));
                 $text = new lang_string('hide');
