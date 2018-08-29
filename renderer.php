@@ -290,7 +290,7 @@ class format_stardust_renderer extends plugin_renderer_base {
         // add progress bar to section header
         echo $this->getsectionprogress($section);
 
-        } 
+        }
         // display section description (if needed)
         if ($contentvisible && ($summary = $this->format_summary_text($section))) {
             echo html_writer::tag('div', $summary, array('class' => 'summary'));
@@ -320,12 +320,14 @@ class format_stardust_renderer extends plugin_renderer_base {
             if (!empty($children) || $movingsection) {
               //TODO hide/show subsection
               // SG - hide temporary
-                // $sectionstyle = '';
+                $sectionstyle = '';
                 // if (course_get_format($course)->get_section($num)->collapsed == FORMAT_STARDUST_COLLAPSED && $level > 0 && !$PAGE->user_is_editing() ) {
                 //   $sectionstyle = 'display:none';
-                // }elseif (course_get_format($course)->get_section($num)->collapsed == FORMAT_STARDUST_COLLAPSED && $level > 1 && $PAGE->user_is_editing()) {
+                // }elseif (course_get_format($course)->get_section($num)->collapsed == FORMAT_STARDUST_COLLAPSED && $level > 0 && $PAGE->user_is_editing()) {
                 //   $sectionstyle = 'display:none';
                 // }
+
+                if (course_get_format($course)->get_section($num)->collapsed == FORMAT_STARDUST_COLLAPSED && $level > 0)  $sectionstyle = 'display:none';
 
                 echo html_writer::start_tag('ul', array('class' => 'flexsections flexsections-level-'.($level+1), 'style' => $sectionstyle ));
                 foreach ($children as $num) {
