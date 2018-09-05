@@ -214,8 +214,8 @@ class format_stardust_renderer extends plugin_renderer_base {
             // if (!$PAGE->user_is_editing()) {
                 $topunit_btn = '<span class = "openall">'.get_string('openall', 'format_stardust').'</span><spam class = "closeall">'.get_string('closeall', 'format_stardust').'</span>';
                 echo html_writer::start_tag('ul', array('class' => 'flexsections flexsections-level-0'));
-                echo html_writer::start_tag('div', array('class' => 'topunit display__none'));
-                echo html_writer::tag('span', get_string('topunit', 'format_stardust'), array('class' => 'topunit_name'));
+                echo html_writer::start_tag('div', array('class' => 'topunit'));
+                echo html_writer::tag('span', get_string('topunit', 'format_stardust'), array('class' => 'topunit_name display__none'));
                 echo html_writer::tag('button', $topunit_btn, array('class' => 'topunit_btn', 'data-handler' => 'openall'));
                 echo html_writer::end_tag('div');
             // }
