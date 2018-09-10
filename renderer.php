@@ -327,7 +327,7 @@ class format_stardust_renderer extends plugin_renderer_base {
                 //   $sectionstyle = 'display:none';
                 // }
 
-                if (course_get_format($course)->get_section($num)->collapsed == FORMAT_STARDUST_COLLAPSED && $level > 0)  $sectionstyle = 'display:none';
+                if (course_get_format($course)->get_section($sectionnum)->collapsed == FORMAT_STARDUST_COLLAPSED && $level > 0)  $sectionstyle = 'display:none';
 
                 echo html_writer::start_tag('ul', array('class' => 'flexsections flexsections-level-'.($level+1), 'style' => $sectionstyle ));
                 foreach ($children as $num) {
