@@ -15,10 +15,12 @@ const toggleAllSection = (target) => {
     $('.flexsections-level-0 .section_wrap').removeClass(`section-opened`);
     $(target).removeClass(`section_opened`);
     $('.flexsections-level-0 .section.img-text').slideUp(1000);
+    $('.flexsections-level-0 .flexsections-level-2').slideUp(1000);
   }else {
     $('.flexsections-level-0 .section_wrap').addClass(`section-opened`);
     $(target).addClass(`section_opened`);
     $('.flexsections-level-0 .section.img-text').slideDown(1000);
+    $('.flexsections-level-0 .flexsections-level-2').slideDown(1000);
   }
 
 }
