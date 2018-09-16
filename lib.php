@@ -1279,8 +1279,7 @@ class format_stardust extends format_base {
     public function course_content_header() {
         global $PAGE;
 
-        // if we are on course view page for particular section, return 'back to parent' control
-        if ($this->get_viewed_section()) {
+/*        if ($this->get_viewed_section()) {
             $section = $this->get_section($this->get_viewed_section());
             if ($section->parent) {
                 $sr = $this->find_collapsed_parent($section->parent);
@@ -1305,7 +1304,7 @@ class format_stardust extends format_base {
             }
             return new format_stardust_edit_control('backto', $this->get_view_url($sectionnum), strip_tags($text));
         }
-
+*/
         return parent::course_content_header();
     }
 
