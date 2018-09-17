@@ -355,7 +355,7 @@ class format_stardust extends format_base {
                     )
                 ),
                 'help' => "displayunitsdesc",
-                'help_component' => 'moodle',
+                'help_component' => 'format_stardust',
             ),
             'displaymessages' => array(
                 'label' => get_string('displaymessages', 'format_stardust'),
@@ -367,7 +367,7 @@ class format_stardust extends format_base {
                     )
                 ),
                 'help' =>"displaymessagesdesc",
-                'help_component' => 'moodle',
+                'help_component' => 'format_stardust',
             ),
             'displaygrades' => array(
                 'label' => get_string('displaygrades', 'format_stardust'),
@@ -379,7 +379,7 @@ class format_stardust extends format_base {
                     )
                 ),
                 'help' => "displaygradesdesc",
-                'help_component' => 'moodle',
+                'help_component' => 'format_stardust',
             ),
             'showbagestag' => array(
                 'label' => get_string('showbagestag', 'format_stardust'),
@@ -391,7 +391,7 @@ class format_stardust extends format_base {
                     )
                 ),
                 'help' => "showbagestagdesc",
-                'help_component' => 'moodle',
+                'help_component' => 'format_stardust',
             ),
             'showcertificatestag' => array(
                 'label' => get_string('showcertificatestag', 'format_stardust'),
@@ -403,7 +403,7 @@ class format_stardust extends format_base {
                     )
                 ),
                 'help' => "showcertificatestagdesc",
-                'help_component' => 'moodle',
+                'help_component' => 'format_stardust',
             )
         );
 
