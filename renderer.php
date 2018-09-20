@@ -293,7 +293,8 @@ class format_stardust_renderer extends plugin_renderer_base {
         }
         // display section description (if needed)
         if ($contentvisible && ($summary = $this->format_summary_text($section))) {
-            echo html_writer::tag('div', $summary, array('class' => 'summary'));
+            $hide0sec = ($section->visible == 3) ? ' hidden' : '';
+            echo html_writer::tag('div', $summary, array('class' => 'summary' . $hide0sec));
         } else {
             echo html_writer::tag('div', '', array('class' => 'summary nosummary'));
         }
