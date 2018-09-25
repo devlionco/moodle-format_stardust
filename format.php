@@ -53,6 +53,4 @@ $PAGE->requires->js('/course/format/stardust/format.js');
 $PAGE->requires->string_for_js('confirmdelete', 'format_stardust');
 $PAGE->requires->js_init_call('M.course.format.init_flexsections');
 
-$PAGE->requires->js_call_amd('format_stardust/toogleSection', 'init');
-
-
+$PAGE->requires->js_call_amd('format_stardust/toggleSection', 'init');

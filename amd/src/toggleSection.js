@@ -82,13 +82,17 @@ const sendAjex = () => {
             }
           });
 
+          if(window.location.href.indexOf('&sectionid') > -1) {
+             $('.sectiontoggle').trigger( "click" );
+          }
+
           if (sectionsnumber) {
             sectionsnumber.addEventListener('click', function(e){
               let target = e.target;
               while (!target.classList.contains(MAINCLASS)) {
 
                 if (target.classList.contains(`movehere`)) {
-                  sendAjex();console.dir('send');
+                  sendAjex();
                   return
                 }
 

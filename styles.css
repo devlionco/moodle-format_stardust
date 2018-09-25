@@ -1,43 +1,437 @@
 /* stylelint-disable */
 .format-flexsections .course-content ul.flexsections {
-    margin: 0;
-    padding: 0;
-}
-.format-flexsections .course-content ul.flexsections li.section {list-style: none;margin:3px 0 2px 1em;padding-left:5px;padding-right:0;}
-.course-content ul.flexsections li.movehere {list-style: none;margin:3px 0 2px 1em;}
+  margin: 0;
+  padding: 0; }
+
+.format-flexsections .course-content ul.flexsections li.section {
+  list-style: none;
+  margin: 3px 0 2px 1em;
+  padding-left: 5px;
+  padding-right: 0; }
+
+.course-content ul.flexsections li.movehere {
+  list-style: none;
+  margin: 3px 0 2px 1em; }
+
 .dir-rtl.format-flexsections .course-content ul.flexsections li.section,
-.dir-rtl.course-content ul.flexsections li.movehere {margin:3px 1em 2px 0;}
-.format-flexsections .course-content ul.flexsections-level-0 > li.section {margin-left: 0;}
-.format-flexsections .course-content ul.flexsections-level-0 > li.movehere {margin-left: 0;}
-.format-flexsections .course-content ul.flexsections li.section.main {border:none;}
-.format-flexsections .course-content ul.flexsections-level-1 > li.section.main {border: #DDDDDD solid 1px;margin-left:0;padding-right:5px;}
-.format-flexsections .course-content ul.flexsections li.section .controls img {padding-left:0.3em;padding-right:0.3em}
-.format-flexsections .course-content ul.flexsections li.section .availabilityinfo {padding-bottom: .5em;}
-.format-flexsections .course-content ul.flexsections li.section ul.section {margin-left:0;margin-right:0;padding-left:0;}
-.format-flexsections .course-content ul.flexsections li.section > .content > .summary {margin-left:0;padding-left:0.2em;}
+.dir-rtl.course-content ul.flexsections li.movehere {
+  margin: 3px 1em 2px 0; }
+
+.format-flexsections .course-content ul.flexsections-level-0 > li.section {
+  margin-left: 0; }
+
+.format-flexsections .course-content ul.flexsections-level-0 > li.movehere {
+  margin-left: 0; }
+
+.format-flexsections .course-content ul.flexsections li.section.main {
+  border: none; }
+
+.format-flexsections .course-content ul.flexsections-level-1 > li.section.main {
+  border: #DDDDDD solid 1px;
+  margin-left: 0;
+  padding-right: 5px; }
+
+.format-flexsections .course-content ul.flexsections li.section .controls img {
+  padding-left: 0.3em;
+  padding-right: 0.3em; }
+
+.format-flexsections .course-content ul.flexsections li.section .availabilityinfo {
+  padding-bottom: .5em; }
+
+.format-flexsections .course-content ul.flexsections li.section ul.section {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0; }
+
+.format-flexsections .course-content ul.flexsections li.section > .content > .summary {
+  margin-left: 0;
+  padding-left: 0.2em; }
 
 /* Overwrite bootstrapbase styles */
 .format-flexsections .course-content ul.flexsections .controls a.hide,
-.format-flexsections .course-content ul.flexsections .controls a.show {display:inline;}
+.format-flexsections .course-content ul.flexsections .controls a.show {
+  display: inline; }
 
 /* hidden section */
 .format-flexsections .course-content li.section.hidden > .content > h3.sectionname,
 .format-flexsections .course-content li.section.hidden > .content > h3.sectionname a,
 .format-flexsections .course-content li.section.hidden > .content > .summary,
 .format-flexsections .course-content li.section.hidden .addresourcemodchooser a,
-.format-flexsections .course-content li.section.hidden a.addsection {color:#AAAAAA;}
+.format-flexsections .course-content li.section.hidden a.addsection {
+  color: #AAAAAA; }
 
 /* add extra borders in editing mode */
-.format-flexsections.editing .course-content ul.flexsections li.section.main {border: #DDDDDD solid 1px;}
-.format-flexsections.editing .course-content ul.flexsections li.section.main#section-0 {border: none;}
+.format-flexsections.editing .course-content ul.flexsections li.section.main {
+  border: #DDDDDD solid 1px; }
+
+.format-flexsections.editing .course-content ul.flexsections li.section.main#section-0 {
+  border: none; }
 
 /* moving section */
-.format-flexsections .course-content ul.flexsections li.section.ismoving {background:#EEEEEE;}
-.format-flexsections .course-content ul.flexsections li.movehere > img {padding-left:5px;}
-.format-flexsections .course-content div.cancelmoving {margin:3px;padding:5px;background:yellow;border:1px solid black;text-align:center;position:fixed;top:0;right:0;}
+.format-flexsections .course-content ul.flexsections li.section.ismoving {
+  background: #EEEEEE; }
 
-.format-flexsections .jumpmenu {text-align:center;}
+.format-flexsections .course-content ul.flexsections li.movehere > img {
+  padding-left: 5px; }
 
-.format-flexsections .header.backto {padding: 5px 10px;border: 1px solid #DDD;margin-bottom:5px;}
-.format-flexsections .header.backto .backto-text {margin-left:10px;}
+.format-flexsections .course-content div.cancelmoving {
+  margin: 3px;
+  padding: 5px;
+  background: yellow;
+  border: 1px solid black;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0; }
 
+.format-flexsections .jumpmenu {
+  text-align: center; }
+
+.format-flexsections .header.backto {
+  padding: 5px 10px;
+  border: 1px solid #DDD;
+  margin-bottom: 5px; }
+
+.format-flexsections .header.backto .backto-text {
+  margin-left: 10px; }
+
+.format-stardust .section .activity.label .no-overflow {
+  display: block;
+  height: 62px;
+  overflow: hidden; }
+
+.format-stardust li, .format-stardust ul {
+  list-style-type: none; }
+
+.format-stardust #region-main {
+  background-color: #f4f3f0; }
+
+.format-stardust .card {
+  border: none;
+  background-color: #f4f3f0; }
+
+.format-stardust .card-block {
+  max-width: 1344px;
+  margin: 0 auto;
+  padding: 0; }
+
+.format-stardust .flexsections {
+  padding: 0;
+  list-style-type: none; }
+
+.format-stardust .section_wrap {
+  border: 1px solid #e6e6e5;
+  border-radius: 0;
+  height: 94px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background: #fff;
+  position: relative;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-top: 18px; }
+
+.format-stardust .pinned .flexsections {
+  display: block !important; }
+
+.format-stardust .pinned .course-content ul.section {
+  margin: 0; }
+
+.format-stardust .pinned .sectionprogress {
+  display: none; }
+
+.format-stardust .pinned .section_wrap {
+  border-color: #0096DB; }
+
+.format-stardust .pinned .sectionnumber {
+  height: 100%;
+  background-color: #0096DB;
+  font-size: 0; }
+
+.format-stardust .pinned .sectionnumber::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background: url([[pix:format_stardust|pushpin]]) no-repeat center; }
+
+.format-stardust .sectionname {
+  margin: 0;
+  margin-left: 44px;
+  font-weight: 600;
+  font-size: 27px; }
+  .format-stardust .sectionname a {
+    color: #3C3C3C; }
+  .format-stardust .sectionname a:hover {
+    text-decoration: none; }
+
+.format-stardust .mstatus {
+  margin-left: auto;
+  margin-right: 17px;
+  line-height: 39px;
+  font-weight: 600;
+  font-size: 18px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.format-stardust .mod_red {
+  color: red; }
+
+.format-stardust .mod_orange {
+  color: #FF8E4B; }
+
+.format-stardust .mod_gray {
+  font-weight: 400;
+  color: #3C3C3C; }
+
+.format-stardust .mod_complete {
+  width: 30px;
+  height: 40px;
+  background: url([[pix:format_stardust|check]]) no-repeat center;
+  background-size: contain; }
+
+.format-stardust .sectionprogress {
+  background-color: #D5D5D4;
+  position: relative; }
+
+.format-stardust .section_wrap.section-opened .sectionname a {
+  color: #0096db; }
+
+.format-stardust .section_wrap.section-opened .sectiontoggle {
+  background: url([[pix:format_stardust|close]]) no-repeat center; }
+
+.format-stardust .section_wrap ~ .section {
+  display: none; }
+
+.format-stardust .sectionprogress-bar {
+  height: 4px;
+  background: #00db7c;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px; }
+
+.format-stardust .sectionprogress-percent {
+  display: none;
+  position: absolute;
+  font-size: 12px;
+  top: -20px;
+  width: 30px;
+  text-align: right; }
+
+.format-stardust .section_wrap.section-opened + .sectionprogress .sectionprogress-bar {
+  height: 12px; }
+
+.format-stardust .section_wrap.section-opened + .sectionprogress .sectionprogress-percent {
+  display: block; }
+
+.format-stardust .sectionnumber {
+  position: relative;
+  width: 98px;
+  font-size: 27px;
+  font-weight: 600;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #3C3C3C; }
+
+.format-stardust .sectionnumber::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-right: 2px solid #e6e6e5;
+  width: 1px;
+  height: 100%; }
+
+.format-stardust .sectiontoggle {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: 37px;
+  background: url([[pix:format_stardust|open]]) no-repeat center;
+  background-size: 50px; }
+
+.format-stardust .controls .mergeup {
+  display: none; }
+
+.format-stardust .controls .marker i {
+  margin: 0;
+  font-size: 16px;
+  width: unset;
+  margin-right: .5rem;
+  color: inherit; }
+
+.format-stardust .controls .hide {
+  display: inline-block; }
+
+.format-stardust .course-content .section.img-text {
+  padding: 0;
+  margin: 0; }
+
+.format-stardust .course-content .section .activity .contentwithoutlink > a,
+.format-stardust .course-content .section .activity .activityinstance > a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 0;
+  text-indent: 0; }
+
+.format-stardust .course-content .section li.activity {
+  width: 100%;
+  height: 72px;
+  margin-top: 8px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e6e6e5;
+  border-image: initial;
+  background: white; }
+  .format-stardust .course-content .section li.activity > div {
+    width: 100%; }
+  .format-stardust .course-content .section li.activity .mod-indent-outer {
+    display: block; }
+  .format-stardust .course-content .section li.activity .activityinstance {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-positive: 1;
+        flex-grow: 1; }
+  .format-stardust .course-content .section li.activity .mod-indent > div {
+    width: 100%; }
+  .format-stardust .course-content .section li.activity img.activityicon {
+    margin-left: 28px;
+    width: 40px;
+    height: 40px; }
+  .format-stardust .course-content .section li.activity .instancename {
+    margin-left: 57px;
+    margin-right: 20px;
+    white-space: nowrap;
+    color: #3c3c3c;
+    font-weight: bold;
+    text-decoration: none; }
+
+.format-stardust .course-content .section .no-overflow,
+.format-stardust .course-content .activity .actions {
+  display: none; }
+
+.format-stardust .pinned .flexsections-level-2 {
+  margin-left: 0; }
+
+.format-stardust .flexsections-level-2 {
+  margin-left: 98px; }
+
+.format-stardust .flexsections-level-3 {
+  margin-left: 196px; }
+
+.format-stardust .topunit {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  border-bottom: 1px solid #D5D5D4; }
+  .format-stardust .topunit .topunit_name {
+    margin-right: auto;
+    color: #929191;
+    font-size: 24px;
+    font-weight: 600; }
+  .format-stardust .topunit .topunit_btn {
+    position: relative;
+    border: none;
+    background: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: #3C3C3C;
+    padding-right: 40px; }
+    .format-stardust .topunit .topunit_btn .closeall {
+      display: none; }
+  .format-stardust .topunit .topunit_btn::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: url([[pix:format_stardust|open_black]]) no-repeat center;
+    background-size: 34px; }
+  .format-stardust .topunit .topunit_btn.section_opened .closeall {
+    display: inline-block; }
+  .format-stardust .topunit .topunit_btn.section_opened .openall {
+    display: none; }
+  .format-stardust .topunit .topunit_btn.section_opened::after {
+    background: url([[pix:format_stardust|close_black]]) no-repeat center;
+    background-size: 16px; }
+
+.format-stardust .topunit + .section.main > .content > .summary {
+  display: none; }
+
+.format-stardust .mod-indent-outer > div {
+  display: -ms-flexbox;
+  display: flex; }
+
+.format-stardust .contentafterlink img {
+  display: none; }
+
+.format-stardust #section-0.section.main > .controls {
+  display: none; }
+
+.format-stardust #section-0.section.main > .content > .mdl-right {
+  display: none; }
+
+.format-stardust #section-0.section.main.pinned .mdl-right {
+  display: none; }
+
+.format-stardust #section-0.section.main.pinned .controls {
+  display: block; }
+
+.format-stardust #section-0.section.main.pinned > .content > .summary .no-overflow {
+  display: block; }
+
+.format-stardust.editing .no-overflow,
+.format-stardust.editing .activity .actions {
+  display: block; }
+
+.format-stardust.editing .section .activity .editing_move {
+  right: 20px;
+  top: 12px; }
+
+.format-stardust.editing .section .activity .availabilityinfo,
+.format-stardust.editing .section .activity .contentafterlink {
+  margin-top: 22px;
+  margin-right: -10px; }
+
+.format-stardust.editing .section li.activity .actions {
+  display: inline-block; }
+
+.format-stardust.editing .section.main {
+  border: 1px solid #7b7b7b;
+  padding: 0 10px;
+  margin-top: 10px;
+  padding-bottom: 10px; }
+
+.format-stardust.editing .course-content ul li.section.main:last-child {
+  border-bottom: 1px solid #7b7b7b; }
+
+.format-stardust.editing .section.main#section-0 {
+  border: none; }
+
+.format-stardust.editing .ismoving {
+  background-color: #9ac6ff; }
+  .format-stardust.editing .ismoving .section_wrap {
+    background-color: #9ac6ff; }
+
+:target {
+  padding-top: 0 !important;
+  margin-top: 0 !important; }

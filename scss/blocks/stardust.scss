@@ -1,0 +1,427 @@
+.format-stardust {
+
+  // label activity
+  .section .activity.label .no-overflow {
+    display: block;
+    height: 62px;
+    overflow: hidden;
+  }
+
+  li, ul {
+    list-style-type: none;
+  }
+
+  #region-main {
+    background-color: #f4f3f0;
+  }
+  .card {
+    border: none;
+    background-color: #f4f3f0;
+  }
+
+  .card-block {
+    max-width: 1344px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .flexsections {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .section_wrap {
+    border: 1px solid #e6e6e5;
+    border-radius: 0;
+    height: 94px;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    position: relative;
+    align-items: center;
+    margin-top: 18px;
+  }
+
+  // pined section
+  // .course-content {
+  .pinned {
+    .flexsections {
+      display: block !important;
+    }
+    .course-content ul.section {
+      margin: 0;
+    }
+    .sectionprogress {
+      display: none;
+    }
+    .section_wrap {
+      border-color: #0096DB;
+    }
+    .sectionnumber {
+      height: 100%;
+      background-color: #0096DB;
+      font-size: 0;
+    }
+    .sectionnumber::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 0;
+      right: 0;
+      background: url([[pix:format_stardust|pushpin]]) no-repeat center;
+    }
+  }
+
+  .sectionname {
+    margin: 0;
+    margin-left: 44px;
+    font-weight: $bold;
+    font-size: 27px;
+    a {
+      color: #3C3C3C;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .mstatus {
+    margin-left: auto;
+    margin-right: 17px;
+    line-height: 39px;
+    font-weight: $bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  .mod_red {
+    color: red;
+  }
+  .mod_orange {
+    color: #FF8E4B;
+  }
+  .mod_gray {
+    font-weight: $regular;
+    color: #3C3C3C;
+  }
+  .mod_green {
+    // color: red;
+  }
+
+  .mod_complete {
+    // width: 40px;
+    width: 30px;
+    height: 40px;
+    background: url([[pix:format_stardust|check]]) no-repeat center;
+    background-size: contain;
+  }
+
+  .sectionprogress {
+    background-color: #D5D5D4;
+    position: relative;
+  }
+
+  .section_wrap.section-opened {
+    .sectionname a {
+      color: #0096db;
+    }
+    .sectiontoggle {
+      background: url([[pix:format_stardust|close]]) no-repeat center;
+    }
+  }
+  .section_wrap  ~ .section{
+    display: none;
+  }
+  // .section_wrap.section-opened  ~ .section{
+  //   display: block;
+  // }
+  // .section_wrap.section-opened ~ .section{
+  //   display: block;
+  // }
+  .sectionprogress-bar {
+    height: 4px;
+    background: #00db7c;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  .sectionprogress-percent {
+    display: none;
+    position: absolute;
+    font-size: 12px;
+    top: -20px;
+    width: 30px;
+    text-align: right;
+  }
+
+  .section_wrap.section-opened + .sectionprogress {
+    .sectionprogress-bar {
+      height: 12px;
+    }
+    .sectionprogress-percent {
+      display: block;
+    }
+  }
+
+  .sectionnumber {
+    position: relative;
+    width: 98px;
+    font-size: 27px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // color: #0096db;
+    color: #3C3C3C;
+  }
+  .sectionnumber::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-right: 2px solid #e6e6e5;
+    width: 1px;
+    height: 100%;
+  }
+  .sectiontoggle {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: 37px;
+    background: url([[pix:format_stardust|open]]) no-repeat center;
+    background-size: 50px;
+  }
+
+  .controls .mergeup {
+    display: none;
+  }
+  .controls {
+    .marker i{
+      margin: 0;
+      font-size: 16px;
+      width: unset;
+      margin-right: .5rem;
+      color: inherit;
+    }
+    .hide {
+      display: inline-block;
+    }
+  }
+  .course-content {
+    .section.img-text {
+      padding: 0;
+      margin: 0;
+    }
+    .section .activity .contentwithoutlink > a,
+    .section .activity .activityinstance > a {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      text-indent: 0;
+    }
+
+    .section li.activity {
+      width: 100%;
+      height: 72px;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      padding: 0px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(230, 230, 229);
+      border-image: initial;
+      background: rgb(255, 255, 255);
+
+      & > div {
+        width: 100%;
+      }
+      .mod-indent-outer {
+        display: block;
+      }
+      .activityinstance {
+        display: flex;
+        flex-grow: 1;
+      }
+      .mod-indent > div {
+        width: 100%;
+      }
+
+      img.activityicon {
+        margin-left: 28px;
+        width: 40px;
+        height: 40px;
+      }
+
+      .instancename {
+        margin-left: 57px;
+        margin-right: 20px;
+        white-space: nowrap;
+        color: rgb(60, 60, 60);
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+    }
+    .section .no-overflow,
+    .activity .actions {
+      display: none;
+    }
+  }
+
+  // .flexsections-level-1 .flexsections-level-2 {
+  .pinned .flexsections-level-2 {
+    margin-left: 0;
+  }
+
+  .flexsections-level-2 {
+    margin-left: 98px;
+  }
+  // .flexsections-level-1 .flexsections-level-3 {
+  .flexsections-level-3 {
+    margin-left: 196px;
+  }
+
+  .topunit {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid #D5D5D4;
+    .topunit_name {
+      margin-right: auto;
+      color: #929191;
+      font-size: 24px;
+      font-weight: $bold;
+    }
+
+    .topunit_btn {
+      position: relative;
+      border: none;
+      background: none;
+      font-size: 18px;
+      font-weight: $regular;
+      color: #3C3C3C;
+      padding-right: 40px;
+      .closeall {
+        display: none;
+      }
+    }
+
+    .topunit_btn::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background: url([[pix:format_stardust|open_black]]) no-repeat center;
+      background-size: 34px;
+    }
+    .topunit_btn.section_opened {
+      .closeall {
+        display: inline-block;
+      }
+      .openall {
+        display: none;
+      }
+    }
+
+    .topunit_btn.section_opened::after {
+      background: url([[pix:format_stardust|close_black]]) no-repeat center;
+      background-size: 16px;
+    }
+  }
+  // .topunit + .section.main .summary{
+  //   display: none;
+  // }
+
+  .topunit + .section.main > .content > .summary{
+    display: none;
+  }
+
+  .mod-indent-outer > div{
+    display: flex;
+  }
+  .contentafterlink  img {
+    display: none;
+  }
+
+  // .section .no-overflow,
+  // .activity .actions {
+  //   display: none;
+  // }
+
+  #section-0.section.main {
+    &> .controls {
+      display: none;
+    }
+    &>.content>.mdl-right {
+      display: none;
+    }
+  }
+
+  #section-0.section.main.pinned {
+    .mdl-right {
+      display: none;
+    }
+    .controls {
+      display: block;
+    }
+    &>.content > .summary {
+      .no-overflow {
+        display: block;
+      }
+    }
+  }
+
+}
+
+
+.format-stardust.editing {
+// .editing
+  .no-overflow,
+  .activity .actions {
+    display: block;
+  }
+  .section .activity .editing_move {
+    right: 20px;
+    top: 12px;
+  }
+
+.section .activity .availabilityinfo,
+.section .activity .contentafterlink {
+  margin-top: 22px;
+  margin-right: -10px;
+}
+  .section li.activity .actions {
+    display: inline-block;
+  }
+
+  .section.main  {
+    border: 1px solid #7b7b7b;
+    padding: 0 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+  .course-content ul li.section.main:last-child {
+    border-bottom: 1px solid #7b7b7b;
+  }
+  .section.main#section-0 {
+    border: none;
+  }
+
+  .ismoving {
+    background-color: #9ac6ff;
+    // .content,
+    .section_wrap {
+      background-color: #9ac6ff;
+    }
+  }
+
+
+}
+
+
+:target {
+  padding-top: 0 !important;
+  margin-top:  0 !important;
+}

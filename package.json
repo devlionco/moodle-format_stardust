@@ -1,0 +1,28 @@
+{
+  "name": "Moodle",
+  "private": true,
+  "description": "Moodle",
+  "devDependencies": {
+    "autoprefixer": "6.7.x",
+    "change-case": "^3.0.2",
+    "css-mqpacker": "^5.0.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-inject": "^4.3.2",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-minify": "^2.1.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "3.1.0",
+    "gulp-sequence": "^1.0.0",
+    "gulp-shell": "^0.6.5",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.1",
+    "remove-svg-properties": "^0.3.3"
+  },
+  "engines": {
+    "node": ">=4"
+  }
+}
