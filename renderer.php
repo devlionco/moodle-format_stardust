@@ -35,6 +35,8 @@ require_once($CFG->dirroot.'/course/format/renderer.php');
 class format_stardust_renderer extends plugin_renderer_base {
     /** @var core_course_renderer Stores instances of core_course_renderer */
     protected $courserenderer = null;
+    /** @var array Stores an array of custom section numbers */
+    public $sectionscustomenumeration = array();
 
     /**
      * Constructor
@@ -195,6 +197,7 @@ class format_stardust_renderer extends plugin_renderer_base {
         $context = context_course::instance($course->id);
         $contentvisible = true;
         $sectionnum = $section->section;
+        $this->sectionscustomenumeration[$sectionnum] = $subsectionnumerator;
 
         if (!$section->uservisible || !course_get_format($course)->is_section_real_available($section)) {
             if ($section->visible && !$section->available && $section->availableinfo) {
@@ -274,8 +277,12 @@ class format_stardust_renderer extends plugin_renderer_base {
                   $title = $this->render($collapsedcontrol). $title;
               }
               if ($section->pinned == FORMAT_STARDUST_UNPINNED){
-                // enumerate unpinned sections
-                echo html_writer::tag('span', $subsectionnumerator, array('class' => 'sectionnumber'));
+                // SG - enumerate unpinned sections only in edit mode, else - use data from DB
+                if ($PAGE->user_is_editing()) {
+                    echo html_writer::tag('span', $subsectionnumerator, array('class' => 'sectionnumber'));
+                } else {
+                    echo html_writer::tag('span', $section->customnumber, array('class' => 'sectionnumber'));
+                }
               } else {
                 echo html_writer::tag('span', '', array('class' => 'sectionnumber'));
               }

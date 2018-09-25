@@ -48,6 +48,17 @@ if (($deletesection = optional_param('deletesection', 0, PARAM_INT)) && confirm_
   $renderer->display_section($course, $displaysection, $displaysection);
 }
 
+// SG - Update custom section numbers in DB - only in editing mode
+if ($PAGE->user_is_editing()) {
+  $courseformat = course_get_format($course);
+  foreach($renderer->sectionscustomenumeration as $secnum => $customnum) {
+    $secdata = $courseformat->get_section($secnum);
+    if ($secdata->customnumber != $customnum) {
+      $courseformat->update_section_format_options(array('customnumber' => $customnum, 'id' => $secdata->id));
+    }
+  }
+}
+
 // Include course format js module
 $PAGE->requires->js('/course/format/stardust/format.js');
 $PAGE->requires->string_for_js('confirmdelete', 'format_stardust');

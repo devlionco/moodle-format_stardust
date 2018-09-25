@@ -477,6 +477,10 @@ class format_stardust extends format_base {
                     )
                 ),
                 'default' => COURSE_DISPLAY_SINGLEPAGE,
+            ),
+            'customnumber' => array(
+                'type' => PARAM_RAW,
+                'element_type' => 'hidden'
             )
         );
     }
