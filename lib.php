@@ -1380,6 +1380,11 @@ class format_stardust extends format_base {
             $title = get_section_name($section->course, $section);
             $editlabel = new lang_string('newsectionname', 'format_stardust', $title);
         }
+        if ($linkifneeded) {
+            //remove anchor from url
+            $url = course_get_url($section->course, $section->section, array('navigation' => true));
+            $url->set_anchor('');
+        }
         return parent::inplace_editable_render_section_name($section, $linkifneeded, $editable, $edithint, $editlabel);
     }
 

@@ -65,7 +65,7 @@ class format_stardust_renderer extends plugin_renderer_base {
         }
         $title = get_section_name($course, $section);
         if (!$supresslink) {
-            $url = course_get_url($course, $section, array('navigation' => false));
+            $url = course_get_url($course, $section, array('navigation' => true));
             if ($url) {
                 $title = html_writer::link($url, $title);
             }
@@ -192,6 +192,7 @@ class format_stardust_renderer extends plugin_renderer_base {
      */
     public function display_section($course, $section, $sr, $level = 0, $pinned = false, $subsectionnumerator = null) {
         global $PAGE;
+
         $course = course_get_format($course)->get_course();
         $section = course_get_format($course)->get_section($section);
         $context = context_course::instance($course->id);
