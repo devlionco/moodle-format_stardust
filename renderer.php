@@ -274,7 +274,6 @@ class format_stardust_renderer extends plugin_renderer_base {
             if ($sectionnum && ($title = $this->section_title($sectionnum, $course, ($level == 0) || !$contentvisible))) {
             // if ($sectionnum && ($title = $this->section_title($sectionnum, $course, true))) { //($level == 0) || !$contentvisible) - as it was before - not supress link if ..
               if ($collapsedcontrol) {
-                exit('dsf');
                   $title = $this->render($collapsedcontrol). $title;
               }
               if ($section->pinned == FORMAT_STARDUST_UNPINNED){
