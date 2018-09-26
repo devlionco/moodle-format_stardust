@@ -65,7 +65,7 @@ class format_stardust_renderer extends plugin_renderer_base {
         }
         $title = get_section_name($course, $section);
         if (!$supresslink) {
-            $url = course_get_url($course, $section, array('navigation' => true));
+            $url = course_get_url($course, $section, array('navigation' => false));
             if ($url) {
                 $title = html_writer::link($url, $title);
             }
@@ -274,6 +274,7 @@ class format_stardust_renderer extends plugin_renderer_base {
             if ($sectionnum && ($title = $this->section_title($sectionnum, $course, ($level == 0) || !$contentvisible))) {
             // if ($sectionnum && ($title = $this->section_title($sectionnum, $course, true))) { //($level == 0) || !$contentvisible) - as it was before - not supress link if ..
               if ($collapsedcontrol) {
+                exit('dsf');
                   $title = $this->render($collapsedcontrol). $title;
               }
               if ($section->pinned == FORMAT_STARDUST_UNPINNED){
