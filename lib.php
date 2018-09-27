@@ -114,12 +114,16 @@ class format_stardust extends format_base {
             }
         } else if ($sectionno) {
             // check if this section has separate page
+            // SG -- link for collapsed sections without anchor
             if ($section->collapsed == FORMAT_STARDUST_COLLAPSED) {
                 $url->param('sectionid', $section->id);
                 return $url;
             }
-            // find the parent (or grandparent) page that is displayed on separate page
-            $url->param('sectionid', $this->find_collapsed_parent($section->parent, true));
+            // find the parent (or grandparent) page that is displayed on separate page -- SG - TOREMOVE?
+            //$url->param('sectionid', $this->find_collapsed_parent($section->parent, true)); // SG -- breaks the links to section in our course format
+            
+            // SG -- link for expanded sections with anchor
+            $url->param('sectionid', $section->id); 
             $url->set_anchor('section-'.$sectionno);
             return $url;
         }
