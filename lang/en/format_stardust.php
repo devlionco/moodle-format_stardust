@@ -54,6 +54,8 @@ $string['topunit'] = 'Top unit';
 $string['openall'] = 'Open all';
 $string['closeall'] = 'Close all';
 
+$string['toomanypinned'] = 'Too many pinned section. Only 4 sections could be pinned at the same time';
+
 
 
 // header blocks settings

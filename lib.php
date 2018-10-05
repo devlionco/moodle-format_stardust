@@ -410,7 +410,12 @@ class format_stardust extends format_base {
                 ),
                 'help' => "showcertificatestagdesc",
                 'help_component' => 'format_stardust',
-            )
+            ),
+            'nowpinned' => array (
+                'type' => PARAM_INT,
+                'default' => 0,
+                'element_type' => 'hidden'
+            ),
         );
 
         // define display or not "attendanceinfo show/hide setting"
@@ -734,10 +739,15 @@ class format_stardust extends format_base {
 
             // if requested, switch pinned attribute
             $switchpinned = optional_param('pinned', null, PARAM_INT);
+            $nowpinned = $this->get_course()->nowpinned;
             if ($switchpinned && confirm_sesskey() && has_capability('moodle/course:update', $context)
                     && ($section = $this->get_section($switchpinned))) {
-                if ($section->pinned == FORMAT_STARDUST_UNPINNED) {
-                    $newvalue = FORMAT_STARDUST_PINNED;
+                if ($section->pinned == FORMAT_STARDUST_UNPINNED) { // if section was not pinned before
+                    if ($nowpinned < 4) {                           // if already pinned sections now < 4
+                        $newvalue = FORMAT_STARDUST_PINNED;
+                    } else if ($nowpinned >= 4) {
+                        redirect(course_get_url($this->courseid, $switchcollapsed, $options), get_string('toomanypinned', 'format_stardust'), null, \core\output\notification::NOTIFY_ERROR);
+                    }
                 } else {
                     $newvalue = FORMAT_STARDUST_UNPINNED;
                 }
@@ -746,11 +756,13 @@ class format_stardust extends format_base {
                     if (!isset($options['sr'])) {
                         $options['sr'] = $this->find_collapsed_parent($section->parent);
                     }
+                    $this->update_format_options(array('nowpinned' => ++$nowpinned));
                     redirect(course_get_url($this->courseid, $switchcollapsed, $options));
                 } else {
+                    $this->update_format_options(array('nowpinned' => --$nowpinned));
                     redirect(course_get_url($this->courseid, $switchcollapsed, $options));
                 }
-            }
+            } 
 
             // set course marker if required
             $marker = optional_param('marker', null, PARAM_INT);

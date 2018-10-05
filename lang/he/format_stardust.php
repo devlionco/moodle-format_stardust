@@ -54,6 +54,8 @@ $string['topunit'] = 'יחידת על';
 $string['openall'] = 'פתח הכל';
 $string['closeall'] = 'סגור הכל';
 
+$string['toomanypinned'] = 'Too many pinned section. Only 4 sections could be pinned at the same time';
+
 
 // header blocks settings
 $string['displayunits'] = 'משבצת יחידות';
