@@ -387,12 +387,6 @@
 .format-stardust #section-0.section.main > .controls {
   display: none; }
 
-.format-stardust #section-0.section.main > .content > .mdl-right {
-  display: none; }
-
-.format-stardust #section-0.section.main.pinned .mdl-right {
-  display: none; }
-
 .format-stardust #section-0.section.main.pinned .controls {
   display: block; }
 

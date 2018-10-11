@@ -354,15 +354,15 @@
     &> .controls {
       display: none;
     }
-    &>.content>.mdl-right {
-      display: none;
-    }
+    // &>.content>.mdl-right {
+    //   display: none;
+    // }
   }
 
   #section-0.section.main.pinned {
-    .mdl-right {
-      display: none;
-    }
+    // .mdl-right {
+    //   display: none;
+    // }
     .controls {
       display: block;
     }
