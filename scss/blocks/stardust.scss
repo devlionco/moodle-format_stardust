@@ -3,8 +3,8 @@
   // label activity
   .section .activity.label .no-overflow {
     display: block;
-    height: 62px;
-    overflow: hidden;
+    // height: 62px;
+    // overflow: hidden;
   }
 
   li, ul {
@@ -231,6 +231,11 @@
       border-color: rgb(230, 230, 229);
       border-image: initial;
       background: rgb(255, 255, 255);
+
+      &.label {
+        height: auto;
+        min-height: 72px;
+      }
 
       & > div {
         width: 100%;
