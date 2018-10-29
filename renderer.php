@@ -199,6 +199,14 @@ class format_stardust_renderer extends plugin_renderer_base {
         $contentvisible = true;
         $sectionnum = $section->section;
         $this->sectionscustomenumeration[$sectionnum] = $subsectionnumerator;
+        $hiddsecclass = '';
+
+        // check 'displaysectionsnum' option to limit sections display
+        if (!$PAGE->user_is_editing() && intval($section->customnumber) > $course->displaysectionsnum) { // skip all sections over the limit value in non-edit mode
+            return;
+        } else if ($PAGE->user_is_editing() && intval($section->customnumber) > $course->displaysectionsnum) {
+            $hiddsecclass = ' hidden-section';  // add class for not visible sections in edit mode
+        }
 
         if (!$section->uservisible || !course_get_format($course)->is_section_real_available($section)) {
             if ($section->visible && !$section->available && $section->availableinfo) {
@@ -233,7 +241,8 @@ class format_stardust_renderer extends plugin_renderer_base {
                     ($pinned ? ' pinned ' : '').
                     ($movingsection === $sectionnum ? ' ismoving' : '').
                     (course_get_format($course)->is_section_current($section) ? ' current' : '').
-                    (($section->visible && $contentvisible) ? '' : ' hidden'),
+                    (($section->visible && $contentvisible) ? '' : ' hidden').
+                    $hiddsecclass,
                     'id' => 'section-'.$sectionnum));
 
         // display controls except for expanded/collapsed

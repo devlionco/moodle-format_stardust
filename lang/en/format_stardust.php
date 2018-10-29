@@ -80,3 +80,6 @@ $string['showbagestagdesc_help'] = 'Show or hide block';
 $string['showcertificatestag'] = 'Display Certificates block';
 $string['showcertificatestagdesc'] = 'Show or hide block';
 $string['showcertificatestagdesc_help'] = 'Show or hide block';
+$string['displaysectionsnum'] = 'Number of sections to display';
+$string['displaysectionsnum_help'] = 'Choose number of sections to display for students. Teachers will see all sections in edit mode';
+$string['displayallsections'] = 'All';

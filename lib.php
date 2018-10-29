@@ -352,7 +352,7 @@ class format_stardust extends format_base {
         $config = get_config('format_cards');
         $courseformatoptions = array(
             'displayunits' => array(
-                'label' => get_string('displayunits', 'format_stardust'),
+                'label' => new lang_string('displayunits', 'format_stardust'),
                 'element_type' => 'select',
                 'element_attributes' => array(
                     array(
@@ -364,7 +364,7 @@ class format_stardust extends format_base {
                 'help_component' => 'format_stardust',
             ),
             'displaymessages' => array(
-                'label' => get_string('displaymessages', 'format_stardust'),
+                'label' => new lang_string('displaymessages', 'format_stardust'),
                 'element_type' => 'select',
                 'element_attributes' => array(
                     array(
@@ -376,7 +376,7 @@ class format_stardust extends format_base {
                 'help_component' => 'format_stardust',
             ),
             'displaygrades' => array(
-                'label' => get_string('displaygrades', 'format_stardust'),
+                'label' => new lang_string('displaygrades', 'format_stardust'),
                 'element_type' => 'select',
                 'element_attributes' => array(
                     array(
@@ -388,7 +388,7 @@ class format_stardust extends format_base {
                 'help_component' => 'format_stardust',
             ),
             'showbagestag' => array(
-                'label' => get_string('showbagestag', 'format_stardust'),
+                'label' => new lang_string('showbagestag', 'format_stardust'),
                 'element_type' => 'select',
                 'element_attributes' => array(
                     array(
@@ -400,7 +400,7 @@ class format_stardust extends format_base {
                 'help_component' => 'format_stardust',
             ),
             'showcertificatestag' => array(
-                'label' => get_string('showcertificatestag', 'format_stardust'),
+                'label' => new lang_string('showcertificatestag', 'format_stardust'),
                 'element_type' => 'select',
                 'element_attributes' => array(
                     array(
@@ -414,6 +414,7 @@ class format_stardust extends format_base {
             'nowpinned' => array (
                 'type' => PARAM_INT,
                 'default' => 0,
+                'label' => '',
                 'element_type' => 'hidden'
             ),
         );
@@ -423,7 +424,7 @@ class format_stardust extends format_base {
         $att = $DB->get_record('course_modules', array('course' => $course->id, 'module' => $attmodid, 'deletioninprogress' => 0), 'instance', IGNORE_MULTIPLE); // get first attedndance instance on current course
         if ($att) {
             $courseformatoptions['displayattendanceinfo'] = array(
-                    'label' => get_string('displayattendanceinfo', 'format_stardust'),
+                    'label' => new lang_string('displayattendanceinfo', 'format_stardust'),
                     'element_type' => 'select',
                     'element_attributes' => array(
                         array(
@@ -435,6 +436,23 @@ class format_stardust extends format_base {
                     'help_component' => 'format_stardust',
                 );
         }
+
+        // SG - T-296 - generate select list for 'displaysectionsnum' option
+        $maxcustomnumber = $DB->get_record('course_format_options', array('format' => 'stardust', 'name' => 'customnumber', 'courseid' => $course->id), 'MAX(value) as maxnum'); // get DB query to find max custom section number
+        $maxcustomnumber = ($maxcustomnumber) ? $maxcustomnumber->maxnum : null;
+        $lastsecnum = $this->get_last_section_number();
+        $lastseclist = ($maxcustomnumber) ? $maxcustomnumber : $lastsecnum;
+        $seclist = range(0, $lastseclist);
+        $seclist += array(9999 => new lang_string('displayallsections', 'format_stardust')); // add last item to select with value=9999 - conditionally unlimited sec number
+        $courseformatoptions['displaysectionsnum'] = array(
+            'label' => new lang_string('displaysectionsnum', 'format_stardust'),
+            'help' => 'displaysectionsnum',
+            'help_component' => 'format_stardust',
+            'element_type' => 'select',
+            'element_attributes' => array($seclist), 
+            'default' => 9999,       // 9999 - conditionally unlimited
+            'type' => PARAM_INT
+        );
 
         return $courseformatoptions;
     }
@@ -484,7 +502,7 @@ class format_stardust extends format_base {
             ),
             'collapsed' => array(
                 'type' => PARAM_INT,
-                'label' => get_string('displaycontent', 'format_stardust'),
+                'label' => new lang_string('displaycontent', 'format_stardust'),
                 'element_type' => 'select',
                 'element_attributes' => array(
                     array(
@@ -496,7 +514,7 @@ class format_stardust extends format_base {
             ),
             'pinned' => array(
                 'type' => PARAM_INT,
-                'label' => get_string('displaypinned', 'format_stardust'),
+                'label' => new lang_string('displaypinned', 'format_stardust'),
                 'element_type' => 'select',
                 'element_attributes' => array(
                     array(
