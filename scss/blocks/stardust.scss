@@ -4,8 +4,6 @@
   .section .activity.unilabel .no-overflow,
   .section .activity.label .no-overflow {
     display: block;
-    // height: 62px;
-    // overflow: hidden;
   }
 
   li, ul {
@@ -15,10 +13,6 @@
   #region-main {
     background-color: #f4f3f0;
   }
-  // .card {
-  //   border: none;
-  //   background-color: #f4f3f0;
-  // }
 
   .card-block {
     max-width: 1344px;
@@ -233,6 +227,7 @@
       border-image: initial;
       background: rgb(255, 255, 255);
 
+      &.unilabel,
       &.label {
         height: auto;
         min-height: 72px;

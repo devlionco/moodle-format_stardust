@@ -294,7 +294,7 @@
   border-color: #e6e6e5;
   border-image: initial;
   background: white; }
-  .format-stardust .course-content .section li.activity.label {
+  .format-stardust .course-content .section li.activity.unilabel, .format-stardust .course-content .section li.activity.label {
     height: auto;
     min-height: 72px; }
   .format-stardust .course-content .section li.activity > div {
