@@ -121,9 +121,9 @@ class format_stardust extends format_base {
             }
             // find the parent (or grandparent) page that is displayed on separate page -- SG - TOREMOVE?
             //$url->param('sectionid', $this->find_collapsed_parent($section->parent, true)); // SG -- breaks the links to section in our course format
-            
+
             // SG -- link for expanded sections with anchor
-            $url->param('sectionid', $section->id); 
+            $url->param('sectionid', $section->id);
             $url->set_anchor('section-'.$sectionno);
             return $url;
         }
@@ -441,6 +441,7 @@ class format_stardust extends format_base {
         $maxcustomnumber = $DB->get_record('course_format_options', array('format' => 'stardust', 'name' => 'customnumber', 'courseid' => $course->id), 'MAX(value) as maxnum'); // get DB query to find max custom section number
         $maxcustomnumber = ($maxcustomnumber) ? $maxcustomnumber->maxnum : null;
         $lastsecnum = $this->get_last_section_number();
+        $lastsecnum = ($course) ? $this->get_last_section_number() : 5;
         $lastseclist = ($maxcustomnumber) ? $maxcustomnumber : $lastsecnum;
         $seclist = range(0, $lastseclist);
         $seclist += array(9999 => new lang_string('displayallsections', 'format_stardust')); // add last item to select with value=9999 - conditionally unlimited sec number
@@ -449,7 +450,7 @@ class format_stardust extends format_base {
             'help' => 'displaysectionsnum',
             'help_component' => 'format_stardust',
             'element_type' => 'select',
-            'element_attributes' => array($seclist), 
+            'element_attributes' => array($seclist),
             'default' => 9999,       // 9999 - conditionally unlimited
             'type' => PARAM_INT
         );
@@ -780,7 +781,7 @@ class format_stardust extends format_base {
                     $this->update_format_options(array('nowpinned' => --$nowpinned));
                     redirect(course_get_url($this->courseid, $switchcollapsed, $options));
                 }
-            } 
+            }
 
             // set course marker if required
             $marker = optional_param('marker', null, PARAM_INT);
