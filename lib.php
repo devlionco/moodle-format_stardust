@@ -440,7 +440,6 @@ class format_stardust extends format_base {
         // SG - T-296 - generate select list for 'displaysectionsnum' option
         $maxcustomnumber = $DB->get_record('course_format_options', array('format' => 'stardust', 'name' => 'customnumber', 'courseid' => $course->id), 'MAX(value) as maxnum'); // get DB query to find max custom section number
         $maxcustomnumber = ($maxcustomnumber) ? $maxcustomnumber->maxnum : null;
-        $lastsecnum = $this->get_last_section_number();
         $lastsecnum = ($course) ? $this->get_last_section_number() : 5;
         $lastseclist = ($maxcustomnumber) ? $maxcustomnumber : $lastsecnum;
         $seclist = range(0, $lastseclist);
