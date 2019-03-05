@@ -99,7 +99,7 @@
 .format-stardust .section .activity.label .no-overflow {
   display: block; }
 
-.format-stardust li, .format-stardust ul {
+.format-stardust .course-content li, .format-stardust .course-content ul {
   list-style-type: none; }
 
 .format-stardust #region-main {

@@ -56,7 +56,7 @@ gulp.task('minjs', function(cb) {
 gulp.watch("scss/**/*.{scss,sass}", ["style", 'purge_caches']);
 gulp.watch("amd/src/*.js", ["minjs", 'purge_caches']);
 
-gulp.task("build", function(cb) {
+gulp.task("dev", function(cb) {
   sequence (
     'clean',
     'style',

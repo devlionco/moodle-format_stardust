@@ -6,10 +6,12 @@
     display: block;
   }
 
-  li, ul {
-    list-style-type: none;
+  .course-content {
+    li, ul {
+      list-style-type: none;
+    }
   }
-
+  
   #region-main {
     background-color: #f4f3f0;
   }
