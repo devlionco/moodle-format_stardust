@@ -348,7 +348,7 @@ class format_stardust extends format_base {
         global $DB;
         static $courseformatoptions = false;
         $course = $this->get_course();
-        
+
         // Help contacts section
         $roles = role_get_names(); // Get all system roles.
         $defaultchoices = [3]; // By defaut - editingteacher role is defined.
@@ -357,21 +357,21 @@ class format_stardust extends format_base {
             'label' => get_string('helpcontactroles_label', 'format_stardust'),
             'element_type' => 'header',
         );
-        foreach ($roles as $key => $value) { // Define roles list for help contact. 
+        foreach ($roles as $key => $value) { // Define roles list for help contact.
             $helprolessection['helpcontactroles_'.$key] = array(
                 'label' => $value->localname,
                 'element_type' => 'advcheckbox',
                 'default' => in_array($value->id, $defaultchoices) ? 1 : 0,
                 'element_attributes' => array(
                     '',
-                    array('group' => 1), 
+                    array('group' => 1),
                     array(0, 1)
-                ), 
+                ),
                 'help_component' => 'format_stardust',
             );
         }
 
-        $config = get_config('format_cards');
+        $config = get_config('format_stardust');
         $courseformatoptions = array(
             'displayunits' => array(
                 'label' => new lang_string('displayunits', 'format_stardust'),
@@ -440,8 +440,6 @@ class format_stardust extends format_base {
                 'element_type' => 'hidden'
             ),
         );
-        
-        $courseformatoptions = array_merge_recursive($courseformatoptions, $helprolessection);
 
         // define display or not "attendanceinfo show/hide setting"
         $attmodid = $DB->get_record('modules', array('name' => 'attendance'), 'id')->id; // get attendance module id in system
@@ -478,6 +476,8 @@ class format_stardust extends format_base {
             'type' => PARAM_INT
         );
 
+        $courseformatoptions = array_merge_recursive($courseformatoptions, $helprolessection);
+        
         return $courseformatoptions;
     }
 

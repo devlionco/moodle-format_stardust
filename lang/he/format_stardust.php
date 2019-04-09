@@ -81,6 +81,6 @@ $string['displaysectionsnum'] = 'מספר יחידות הוראה להצגה';
 $string['displaysectionsnum_help'] = 'בחר מספר יחידות הוראה להצגה, מורה ירא את כל היחידות';
 $string['displayallsections'] = 'All';
 
-$string['helpcontactroles_label'] = 'Help contact roles';
-$string['helpcontactroles_desc'] = 'Help contact roles for the course';
-$string['helpcontactrolesdesc_help'] = 'Help contact roles for the course';
+$string['helpcontactroles_label'] = 'עזרה בתפקידים ליצירת קשר';
+$string['helpcontactroles_desc'] = 'עזרה תפקידי קשר עבור הקורס';
+$string['helpcontactrolesdesc_help'] = 'עזרה תפקידי קשר עבור הקורס';
