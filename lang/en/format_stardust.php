@@ -83,3 +83,7 @@ $string['showcertificatestagdesc_help'] = 'Show or hide block';
 $string['displaysectionsnum'] = 'Number of sections to display';
 $string['displaysectionsnum_help'] = 'Choose number of sections to display for students. Teachers will see all sections in edit mode';
 $string['displayallsections'] = 'All';
+
+$string['helpcontactroles_label'] = 'Help contact roles';
+$string['helpcontactroles_desc'] = 'Help contact roles for the course';
+$string['helpcontactrolesdesc_help'] = 'Help contact roles for the course';
