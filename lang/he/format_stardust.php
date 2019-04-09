@@ -80,3 +80,7 @@ $string['showcertificatestagdesc_help'] = 'צלמית תעודות';
 $string['displaysectionsnum'] = 'מספר יחידות הוראה להצגה';
 $string['displaysectionsnum_help'] = 'בחר מספר יחידות הוראה להצגה, מורה ירא את כל היחידות';
 $string['displayallsections'] = 'All';
+
+$string['helpcontactroles_label'] = 'Help contact roles';
+$string['helpcontactroles_desc'] = 'Help contact roles for the course';
+$string['helpcontactrolesdesc_help'] = 'Help contact roles for the course';
