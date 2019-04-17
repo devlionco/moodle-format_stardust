@@ -99,7 +99,8 @@
 .format-stardust .section .activity.label .no-overflow {
   display: block; }
 
-.format-stardust .course-content li, .format-stardust .course-content ul {
+.format-stardust .course-content li,
+.format-stardust .course-content ul {
   list-style-type: none; }
 
 .format-stardust #region-main {
@@ -138,11 +139,11 @@
   display: none; }
 
 .format-stardust .pinned .section_wrap {
-  border-color: #0096DB; }
+  border-color: #0096db; }
 
 .format-stardust .pinned .sectionnumber {
   height: 100%;
-  background-color: #0096DB;
+  background-color: #0096db;
   font-size: 0; }
 
 .format-stardust .pinned .sectionnumber::after {
@@ -159,7 +160,7 @@
   font-weight: 600;
   font-size: 27px; }
   .format-stardust .sectionname a {
-    color: #3C3C3C; }
+    color: #3c3c3c; }
   .format-stardust .sectionname a:hover {
     text-decoration: none; }
 
@@ -178,11 +179,11 @@
   color: red; }
 
 .format-stardust .mod_orange {
-  color: #FF8E4B; }
+  color: #ff8e4b; }
 
 .format-stardust .mod_gray {
   font-weight: 400;
-  color: #3C3C3C; }
+  color: #3c3c3c; }
 
 .format-stardust .mod_complete {
   width: 30px;
@@ -191,7 +192,7 @@
   background-size: contain; }
 
 .format-stardust .sectionprogress {
-  background-color: #D5D5D4;
+  background-color: #d5d5d4;
   position: relative; }
 
 .format-stardust .section_wrap.section-opened .sectionname a {
@@ -234,7 +235,7 @@
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  color: #3C3C3C; }
+  color: #3c3c3c; }
 
 .format-stardust .sectionnumber::after {
   content: "";
@@ -288,7 +289,7 @@
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  padding: 0px;
+  padding: 0;
   border-width: 1px;
   border-style: solid;
   border-color: #e6e6e5;
@@ -321,8 +322,15 @@
     text-decoration: none; }
 
 .format-stardust .course-content .section .no-overflow,
-.format-stardust .course-content .activity .actions {
+.format-stardust .course-content .activity .actions > form {
   display: none; }
+
+.format-stardust .course-content .activity .actions {
+  position: static;
+  font-size: 1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center; }
 
 .format-stardust .pinned .flexsections-level-2 {
   margin-left: 0; }
@@ -339,7 +347,7 @@
   width: 100%;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  border-bottom: 1px solid #D5D5D4; }
+  border-bottom: 1px solid #d5d5d4; }
   .format-stardust .topunit .topunit_name {
     margin-right: auto;
     color: #929191;
@@ -351,7 +359,7 @@
     background: none;
     font-size: 18px;
     font-weight: 400;
-    color: #3C3C3C;
+    color: #3c3c3c;
     padding-right: 40px; }
     .format-stardust .topunit .topunit_btn .closeall {
       display: none; }
@@ -401,7 +409,6 @@
 
 .format-stardust.editing .section .activity .availabilityinfo,
 .format-stardust.editing .section .activity .contentafterlink {
-  /*   margin-top: 22px; */
   margin-right: 80px;
   margin-top: 0; }
 
