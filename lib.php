@@ -477,6 +477,18 @@ class format_stardust extends format_base {
             'default' => 9999,       // 9999 - conditionally unlimited
             'type' => PARAM_INT
         );
+        $courseformatoptions['showcoursefullname'] = array(
+            'label' => get_string('showcoursefullname', 'format_stardust'),
+            'element_type' => 'advcheckbox',
+            'default' => 1,
+            'element_attributes' => array(
+                '',
+                array('group' => 1),
+                array(0, 1)
+            ),
+            'help' => "showcoursefullnamedesc",
+            'help_component' => 'format_stardust',
+        );
 
         $courseformatoptions = array_merge_recursive($courseformatoptions, $helprolessection);
 
