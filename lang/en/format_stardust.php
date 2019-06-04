@@ -87,3 +87,6 @@ $string['displayallsections'] = 'All';
 $string['helpcontactroles_label'] = 'Help contact roles';
 $string['helpcontactroles_desc'] = 'Help contact roles for the course';
 $string['helpcontactrolesdesc_help'] = 'Help contact roles for the course';
+$string['showcoursefullname'] = 'Show course full name';
+$string['showcoursefullnamedesc'] = 'Show course full name';
+$string['showcoursefullnamedesc_help'] = 'This setting will show / hide course full name on the course header.';
